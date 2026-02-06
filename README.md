@@ -13,11 +13,10 @@ Our work introduces a unified algorithm-hardware co-design that leverages the na
 
 Modern CNN accelerators face challenges in balancing compression ratios with hardware efficiency. This project addresses these by:
 1. **PAQ Algorithm**: A "Pruning-After-Quantization" strategy that transforms unstructured quantization-induced zeros into strict N:M structured sparsity.
-2. **LBSMM Architecture**: A hardware-efficient, LUT-based multiplier designed for 4-bit sign-magnitude arithmetic, significantly reducing FPGA resource utilization (DSPs and LUTs).
+2. **LBSMM Architecture**: A hardware-efficient, LUT-based multiplier designed for 4-bit sign-magnitude arithmetic, only consuming 11 LUTs.
 
 ## Key Features
 
-- **Quantization-Induced Sparsity**: Exploits the "Dead Zone" effect in 4-bit symmetric quantization where >80% of weights naturally become zero.
 - **N:M Structured Pruning**: Enforces 4:8 (or other N:M) patterns with minimal accuracy recovery, ensuring 100% hardware utilization.
 - **Sign-Magnitude Arithmetic**: Optimized hardware logic for low-bit multiplication using FPGA's native Look-Up Tables.
 
